@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Quiz - Append Bootstrap Template</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="/static/assets/img/favicon.png" rel="icon">
+    <link href="/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="/static/assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="starter-page-page">
+
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <h1 class="sitename">Append</h1><span>.</span>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="{{ url_for('home')}}" class="active">Home</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title" data-aos="fade">
+            <div class="heading">
+                <div class="container">
+                    <div class="row d-flex justify-content-center text-center">
+                        <div class="col-lg-8">
+                            <h1>Quiz Time!</h1>
+                            <p class="mb-0">Test your knowledge with our quiz!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="breadcrumbs">
+                <div class="container">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current">Quiz</li>
+                    </ol>
+                </div>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <!-- Quiz Section -->
+        <section id="quiz-section" class="quiz-section section">
+            <div class="container" data-aos="fade-up">
+                <form id="quizForm">
+                    <div class="mb-4">
+                        <h4>Question 1: 1+2=?</h4>
+                        <div>
+                            <input type="radio" id="q1a1" name="question1" value="A">
+                            <label for="q1a1">A) 1</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q1a2" name="question1" value="B">
+                            <label for="q1a2">B) 2</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q1a3" name="question1" value="C">
+                            <label for="q1a3">C) 3</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q1a4" name="question1" value="D">
+                            <label for="q1a4">D) 4</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4>Question 2: (2+3)-1=?</h4>
+                        <div>
+                            <input type="radio" id="q2a1" name="question2" value="A">
+                            <label for="q2a1">A) 4</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q2a2" name="question2" value="B">
+                            <label for="q2a2">B) 3</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q2a3" name="question2" value="C">
+                            <label for="q2a3">C) 5</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="q2a4" name="question2" value="D">
+                            <label for="q2a4">D) 6</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit Answers</button>
+                </form>
+            </div>
+        </section><!-- End Quiz Section -->
+
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="sitename">Append</strong> <span>All Rights Reserved</span></p>
+            <div class="credits">
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/vendor/aos/aos.js"></script>
+    <script src="/static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="/static/assets/js/main.js"></script>
+
+</body>
+
+</html>

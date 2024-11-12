@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Append Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="/static/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Append
+  * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="{{ url_for('home')}}" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">BilimGuide</h1><span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{{ url_for('home')}}#hero" class="active">Home</a></li>
+          <li><a href="{{ url_for('home')}}#about">UNT Info</a></li>
+          <li><a href="{{ url_for('home')}}#services">Preparation</a></li>
+          <li><a href="{{ url_for('home')}}#pricing">Pricing</a></li>
+          <li><a href="{{ url_for('home')}}#team">Team</a></li>
+          <li><a href="blog">News</a></li>
+            <li><a href="profile">Profile</a></li>
+          </li>
+          <li><a href="{{ url_for('contact')}}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="{{ url_for('register')}}">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+
+  <img src="/static/assets/img/hero-bg.jpeg" alt="" data-aos="fade-in">
+
+  <div class="container">
+    <div class="row justify-content-center align-items-center" style="min-height: 60vh;">
+      <div class="col-lg-10 text-center">
+        <h1 data-aos="fade-up" data-aos-delay="100">Unified National Testing (UNT)</h1>
+        <p data-aos="fade-up" data-aos-delay="200">
+          The UNT is a standardized exam in Kazakhstan, essential for graduates and students to pursue higher education. 
+          In 2022, over 499,961 participants took part, demonstrating their knowledge and skills.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</section><!-- /Hero Section -->
+
+        <!-- UNT SECTION -->
+    <section id="about" class="about section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-xl-center gy-5">
+
+          <div class="col-xl-5 content">
+            <h3>UNT Information</h3>
+            <h2>UNT - </h2>
+            <p>is an entrance exam in Kazakhstan used for university admissions and the certification of high school graduates. Introduced in 2004, the UNT combines final school exams and university entrance assessments into a single procedure. It evaluates students' knowledge across key subjects and serves as a critical criterion for the allocation of government-funded scholarships.</p>
+            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+          <div class="col-xl-7">
+            <div class="row gy-4 icon-boxes">
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box">
+                  <i class="bi bi-buildings"></i>
+                  <h3>To improve</h3>
+                  <p>results on the UNT, it’s important to develop a clear study schedule, allocating time for each subject and balancing study with rest.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <i class="bi bi-clipboard-pulse"></i>
+                  <h3>Regular practice</h3>
+                  <p>with mock tests will help sharpen problem-solving skills and teach effective time management during the exam.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <i class="bi bi-command"></i>
+                  <h3>Analyzing mistakes</h3>
+                  <p>after practice tests will identify knowledge gaps and allow for adjustments to focus on weaker areas.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <h3>Active recall methods</h3>
+                  <p>such as notes and flashcards, will make revision more efficient and speed up information retention.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+<section id="stats" class="stats section dark-background">
+
+  <img src="/static/assets/img/stats-bg.png" alt="" data-aos="fade-in">
+
+  <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4 justify-content-center">
+
+      <div class="col-lg-6 col-md-8">
+        <div class="stats-item text-center w-100 h-100">
+          <span data-purecounter-start="0" data-purecounter-end="499961" data-purecounter-duration="1" class="purecounter"></span>
+          <p>Graduates and Students Who Participated in the UNT (2022)</p>
+        </div>
+      </div><!-- End Stats Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Stats Section -->
+
+
+<!-- Services Section -->
+<section id="services" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>ENT Preparation</h2>
+    <p>We’ll help you get ready for the ENT so you can pass your exams with confidence and get into the university of your dreams!</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-journal-text"></i></div>
+          <div>
+            <h4 class="title"><a href="services-details.html" class="stretched-link">Online Courses</a></h4>
+            <p class="description">Sign up for courses in math, physics, and other subjects to prepare for the ENT in a convenient format.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-pencil-square"></i></div>
+          <div>
+            <h4 class="title"><a href="services-details.html" class="stretched-link">Mock Tests</a></h4>
+            <p class="description">Take mock exams and receive detailed feedback to understand your strengths and weaknesses.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-lightbulb"></i></div>
+          <div>
+            <h4 class="title"><a href="services-details.html" class="stretched-link">Teacher Consultations</a></h4>
+            <p class="description">Get personalized consultations from experienced teachers to guide your preparation.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-calendar-event"></i></div>
+          <div>
+            <h4 class="title"><a href="services-details.html" class="stretched-link">Study Plan</a></h4>
+            <p class="description">We will create a personalized study plan to ensure you cover all topics in time for the exam.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-graph-up"></i></div>
+          <div>
+            <h4 class="title"><a href="services-details.html" class="stretched-link">Progress Analysis</a></h4>
+            <p class="description">After each mock test, you will receive a detailed report to track your progress.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-people"></i></div>
+          <div>
+            <h4 class="title"><a href="services-details.html" class="stretched-link">Group Sessions</a></h4>
+            <p class="description">Join small group sessions and prepare for the exam with like-minded peers.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Services Section -->
+
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Testing Plans</h2>
+    <p>Choose the plan that best fits your testing needs</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="zoom-in" data-aos-delay="100">
+    <div class="row g-4">
+
+      <div class="col-lg-4">
+        <div class="pricing-item">
+          <h3>Free Test</h3>
+          <div class="icon">
+            <i class="bi bi-lightbulb"></i>
+          </div>
+          <h4><sup>$</sup>0<span> / test</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>Access to free sample questions</span></li>
+            <li><i class="bi bi-check"></i> <span>Basic feedback on answers</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span>Detailed performance analysis</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span>1-on-1 mentoring sessions</span></li>
+          </ul>
+          <div class="text-center"><a href="{{ url_for('quiz')}}">Start Now</a></div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+      <div class="col-lg-4">
+        <div class="pricing-item">
+          <h3>Ultimate Test</h3>
+          <div class="icon">
+            <i class="bi bi-star"></i>
+          </div>
+          <h4><sup>$</sup>49<span> / test</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>All features of Premium Test</span></li>
+            <li><i class="bi bi-check"></i> <span>Personalized coaching sessions</span></li>
+            <li><i class="bi bi-check"></i> <span>Lifetime access to course materials</span></li>
+            <li><i class="bi bi-check"></i> <span>Specialized workshops</span></li>
+            <li><i class="bi bi-check"></i> <span>Dedicated account manager</span></li>
+          </ul>
+          <div class="text-center"><a href="/quizpage2" class="buy-btn">Register to Buy</a></div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+    </div>
+  </div>
+</section><!-- End Pricing Section -->
+    </div>
+  </div>
+
+</section><!-- /Pricing Section -->
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="content px-xl-5">
+              <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+            </div>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="faq-container">
+              <div class="faq-item faq-active">
+                <h3><span class="num">1.</span> <span>What is the UNT?</span></h3>
+                <div class="faq-content">
+                  <p>The Unified National Test (UNT) is a mandatory exam for high school graduates in Kazakhstan, used for university admission.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">2.</span> <span>What subjects are included in the UNT?</span></h3>
+                <div class="faq-content">
+                  <p>Core subjects: Mathematical Literacy, Reading Literacy, and History of Kazakhstan. Additionally, two profile subjects depend on the chosen major.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">3.</span> <span>How many points are needed to enter a university?</span></h3>
+                <div class="faq-content">
+                  <p>The minimum threshold is 50 points, but some majors and universities require higher scores, such as 65–90 points.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">4.</span> <span>How many times can you take the UNT?</span></h3>
+                <div class="faq-content">
+                  <p>The UNT can be taken multiple times throughout the year: in the main session, retake sessions, and additional attempts in August and January.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">5.</span> <span>What if I don’t pass the minimum threshold?</span></h3>
+                <div class="faq-content">
+                  <p>You can retake the exam during the next available session or enroll in a college and later transfer to a university.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+ <!-- Team Section -->
+<section id="team" class="team section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Team</h2>
+    <p>The people who help you discover knowledge and unlock new opportunities</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-5">
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+        <div class="member-img">
+          <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="Team Member 1">
+          <div class="social">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="member-info text-center">
+          <h4>Alikhan Seidakhmetov</h4>
+          <span>Founder & CEO</span>
+          <p>Dreams of making education accessible to everyone and believes that knowledge is the key to success</p>
+        </div>
+      </div><!-- End Team Member -->
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+        <div class="member-img">
+          <img src="/static/assets/img/team/team-2.jpg" class="img-fluid" alt="Team Member 2">
+          <div class="social">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="member-info text-center">
+          <h4>Dinara Zhumagalieva</h4>
+          <span>Education Project Manager</span>
+          <p>Coordinates the development of online courses and ensures the quality of educational content</p>
+        </div>
+      </div><!-- End Team Member -->
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
+        <div class="member-img">
+          <img src="/static/assets/img/team/team-3.jpg" class="img-fluid" alt="Team Member 3">
+          <div class="social">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="member-info text-center">
+          <h4>Yernar Baymukhanov</h4>
+          <span>Chief Technology Officer (CTO)</span>
+          <p>Responsible for platform development and integrating innovative technologies into education</p>
+        </div>
+      </div><!-- End Team Member -->
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
+        <div class="member-img">
+          <img src="/static/assets/img/team/team-4.jpg" class="img-fluid" alt="Team Member 4">
+          <div class="social">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="member-info text-center">
+          <h4>Amanda Jepson</h4>
+          <span>Accountant</span>
+          <p>Ensures financial transparency and maintains smooth financial operations within the organization</p>
+        </div>
+      </div><!-- End Team Member -->
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
+        <div class="member-img">
+          <img src="/static/assets/img/team/team-5.jpg" class="img-fluid" alt="Team Member 5">
+          <div class="social">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="member-info text-center">
+          <h4>Brian Doe</h4>
+          <span>Marketing Specialist</span>
+          <p>Develops strategies to expand the platform’s reach and attract new learners</p>
+        </div>
+      </div><!-- End Team Member -->
+
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
+        <div class="member-img">
+          <img src="/static/assets/img/team/team-6.jpg" class="img-fluid" alt="Team Member 6">
+          <div class="social">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="member-info text-center">
+          <h4>Josepha Palas</h4>
+          <span>Operations Manager</span>
+          <p>Oversees day-to-day activities to ensure everything runs efficiently and meets organizational goals</p>
+        </div>
+      </div><!-- End Team Member -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Team Section -->
+
+    <!-- Recent Posts Section -->
+    <section id="recent-posts" class="recent-posts section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Recent Posts</h2>
+        <p>News here</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <article>
+
+              <div class="post-img">
+                <img src="/static//img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="title">
+                <a href="{{ url_for('blogdetails')}}">Kazakhstan to Introduce Adaptive Testing for National University Entrance Exam (ENT) by 2025</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src="/static/assets/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Maria Doe</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01">Jan 1, 2022</time>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+
+
+        </div><!-- End recent posts list -->
+
+      </div>
+
+    </section><!-- /Recent Posts Section -->
+
+
+  </main>
+
+<footer id="footer" class="footer position-relative light-background">
+
+  <div class="container footer-top">
+    <div class="row gy-4">
+
+      <!-- About Section -->
+      <div class="col-lg-5 col-md-12 footer-about">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span class="sitename">BilimGuide</span>
+        </a>
+        <p>BilimGuide is your trusted partner in education, providing personalized guidance and resources to help you achieve your academic and career goals. We believe that knowledge is the key to unlocking your future.</p>
+        <div class="social-links d-flex mt-4">
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Programs</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Section -->
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">Educational Counseling</a></li>
+          <li><a href="#">Study Abroad Programs</a></li>
+          <li><a href="#">Scholarship Assistance</a></li>
+          <li><a href="#">Online Courses</a></li>
+          <li><a href="#">Skill Development</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4>Contact Us</h4>
+        <p>12 Dostyk Street</p>
+        <p>Astana, Kazakhstan 010000</p>
+        <p><strong>Phone:</strong> +7 7172 123 456</p>
+        <p><strong>Email:</strong> info@bilimguide.kz</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>© <strong class="sitename">BilimGuide</strong> All Rights Reserved</p>
+    <div class="credits">
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+
+</footer>
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/static/assets/vendor/php-email-form/validate.js"></script>
+<script src="/static/assets/vendor/aos/aos.js"></script>
+<script src="/static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="/static/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Main JS File -->
+<script src="/static/assets/js/main.js"></script>
+
+
+</html>
