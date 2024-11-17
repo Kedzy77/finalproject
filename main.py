@@ -18,7 +18,6 @@ login_manager = LoginManager(app)
 login_manager.login_view = 'login'  # Redirect to login page if user is not authenticated
 
 
-# User model
 class User(db.Model, UserMixin):  # UserMixin позволяет использовать функции Flask-Login
     id = db.Column(db.Integer, primary_key=True)
     full_name = db.Column(db.String(150), nullable=False)
