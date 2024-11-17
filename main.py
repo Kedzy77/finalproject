@@ -57,6 +57,11 @@ def home():
 def blog():
     return render_template("blog.html")
 
+@app.route("/faq")
+def faq():
+    return render_template("faqinfo.html")
+
+
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BilimGuide - Your guide to UNT preparation and success">
+    <meta name="author" content="Your Name">
+    <title>BilimGuide - Home</title>
+
+    <!-- External CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Add custom stylesheet here -->
+
+    <!-- Font & Colors -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .header .logo {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .header .logo span {
+            color: #00B4D8;
+        }
+
+        .navmenu {
+            display: flex;
+            align-items: center;
+        }
+
+        .navmenu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navmenu ul li {
+            margin-right: 20px;
+        }
+
+        .navmenu ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 10px 15px;
+            transition: color 0.3s ease;
+        }
+
+        .navmenu ul li a:hover,
+        .navmenu ul li a.active {
+            color: #d80000;
+        }
+
+        .btn-getstarted {
+            padding: 12px 30px;
+            background-color: #d80000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-getstarted:hover {
+            background-color: #d10202;
+        }
+
+        .mobile-nav-toggle {
+            display: none;
+        }
+
+        @media (max-width: 991px) {
+            .navmenu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: #fff;
+                width: 250px;
+                height: 100vh;
+                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+            }
+
+            .navmenu.active {
+                display: flex;
+            }
+
+            .navmenu ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .mobile-nav-toggle {
+                display: block;
+                font-size: 2rem;
+                cursor: pointer;
+            }
+        }
+
+        .faq-section {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .faq-item:hover {
+            background-color: #f1f1f1;
+        }
+
+        .faq-item h3 {
+            font-size: 1.25rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .faq-item p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .faq-toggle {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body class="index-page">
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container-fluid d-flex justify-content-between align-items-center py-3">
+            <!-- Logo Section -->
+            <a href="{{ url_for('home')}}" class="logo">
+                <h1>BilimGuide<span>.</span></h1>
+            </a>
+
+            <!-- Navigation Menu -->
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="{{ url_for('home')}}#hero" class="active">Home</a></li>
+                    <li><a href="{{ url_for('faq')}}">Preparation</a></li>
+                    <li><a href="{{ url_for('home')}}#pricing">Pricing</a></li>
+                    <li><a href="{{ url_for('home')}}#team">Team</a></li>
+                    <li><a href="blog">News</a></li>
+                    <li><a href="profile">Profile</a></li>
+                    <li><a href="{{ url_for('contact')}}">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <i class="mobile-nav-toggle d-xl-none bi bi-list" onclick="toggleMenu()"></i>
+        </div>
+    </header>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="faq-container">
+
+                <div class="faq-item faq-active">
+                    <h3>1. What is the UNT?</h3>
+                    <p>The Unified National Test (UNT) is a mandatory exam for high school graduates in Kazakhstan, used for university admission.</p>
+                    <i class="faq-toggle bi bi-chevron-down"></i>
+                </div>
+
+                <div class="faq-item">
+                    <h3>2. What subjects are included in the UNT?</h3>
+                    <p>Core subjects: Mathematical Literacy, Reading Literacy, and History of Kazakhstan. Additionally, two profile subjects depend on the chosen major.</p>
+                    <i class="faq-toggle bi bi-chevron-down"></i>
+                </div>
+
+                <div class="faq-item">
+                    <h3>3. How many points are needed to enter a university?</h3>
+                    <p>The minimum threshold is 50 points, but some majors and universities require higher scores, such as 65–90 points.</p>
+                    <i class="faq-toggle bi bi-chevron-down"></i>
+                </div>
+
+                <div class="faq-item">
+                    <h3>4. How many times can you take the UNT?</h3>
+                    <p>The UNT can be taken multiple times throughout the year: in the main session, retake sessions, and additional attempts in August and January.</p>
+                    <i class="faq-toggle bi bi-chevron-down"></i>
+                </div>
+
+                <div class="faq-item">
+                    <h3>5. What if I don’t pass the minimum threshold?</h3>
+                    <p>You can retake the exam during the next available session or enroll in a college and later transfer to a university.</p>
+                    <i class="faq-toggle bi bi-chevron-down"></i>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleMenu() {
+            const navmenu = document.getElementById('navmenu');
+            navmenu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>
