@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Courses</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        html, body {
+            display: grid;
+            height: 100%;
+            width: 100%;
+            place-items: center;
+            background: #f4f4f9;
+        }
+        ::selection {
+            background: #4158d0;
+            color: #fff;
+        }
+        .wrapper {
+            display: flex;
+            width: 80%;
+            max-width: 1000px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .course-list {
+            width: 60%;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+        .course-list .title {
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .course-item {
+            margin-bottom: 20px;
+        }
+        .course-item input[type="button"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 500;
+            background: #c85050;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .course-item input[type="button"]:hover {
+            background: #9e3b3b;
+        }
+        .course-item label {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .course-description {
+            display: none;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .description-box {
+            width: 35%;
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 500px;
+        }
+
+        .description-box h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form .signup-link {
+            color: #262626;
+            margin-top: 20px;
+            text-align: center;
+        }
+        form .signup-link a {
+            color: #c85050;
+            text-decoration: none;
+        }
+        form .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function toggleDescription(courseId) {
+            const description = document.getElementById(courseId);
+            description.style.display = description.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Course List -->
+        <div class="course-list">
+            <div class="title">Online Courses</div>
+            <div class="course-item">
+                <input type="button" value="View Course" onclick="toggleDescription('course1')">
+                <label>History of Kazakhstan</label>
+                <div class="course-description" id="course1">
+                    <p>This course covers the history of Kazakhstan from ancient times to modern days. Key events, figures, and the country’s development are explored in depth, giving a broad understanding of Kazakhstan's cultural and political history.</p>
+                </div>
+            </div>
+
+            <div class="course-item">
+                <input type="button" value="View Course" onclick="toggleDescription('course2')">
+                <label>Mathematics</label>
+                <div class="course-description" id="course2">
+                    <p>This course provides a solid foundation in mathematics, covering topics such as algebra, calculus, and geometry. Ideal for those looking to strengthen their math skills, it includes both theoretical knowledge and practical applications.</p>
+                </div>
+            </div>
+
+            <div class="course-item">
+                <input type="button" value="View Course" onclick="toggleDescription('course3')">
+                <label>Informatics</label>
+                <div class="course-description" id="course3">
+                    <p>This course introduces the fundamentals of computer science and programming. Topics include data structures, algorithms, and software development processes. Perfect for those seeking a career in technology and programming.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Course Description Box -->
+        <div class="description-box">
+            <h3>Select a course to see the description here</h3>
+            <div id="description-text">
+                <!-- Selected course description will appear here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="signup-link">
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>

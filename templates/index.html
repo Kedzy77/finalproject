@@ -41,30 +41,31 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-      <a href="{{ url_for('home')}}" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">BilimGuide</h1><span>.</span>
-      </a>
+  <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
+    <h1 class="sitename">BilimGuide</h1><span>.</span>
+  </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="{{ url_for('home')}}#hero" class="active">Home</a></li>
-          <li><a href="{{ url_for('home')}}#about">UNT Info</a></li>
-          <li><a href="{{ url_for('home')}}#services">Preparation</a></li>
-          <li><a href="{{ url_for('home')}}#pricing">Pricing</a></li>
-          <li><a href="{{ url_for('home')}}#team">Team</a></li>
-          <li><a href="blog">News</a></li>
-            <li><a href="profile">Profile</a></li>
-          </li>
-          <li><a href="{{ url_for('contact')}}">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+  <nav id="navmenu" class="navmenu">
+    <ul>
+      <li><a href="/#hero" class="active">Home</a></li>
+      <li><a href="/#about">UNT Info</a></li>
+      <li><a href="/#services">Preparation</a></li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/#team">Team</a></li>
+      <li><a href="/blog">News</a></li>
+      <li><a href="/profile">Profile</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+  </nav>
 
-      <a class="btn-getstarted" href="{{ url_for('register')}}">Get Started</a>
+  <!-- "Get Started" Button -->
+  <a id="btn-getstarted" class="btn-getstarted" href="/register">Get Started</a>
 
-    </div>
+</div>
+
+
+
   </header>
 
   <main class="main">
@@ -572,7 +573,7 @@
           <li><a href="#">Educational Counseling</a></li>
           <li><a href="#">Study Abroad Programs</a></li>
           <li><a href="#">Scholarship Assistance</a></li>
-          <li><a href="#">Online Courses</a></li>
+          <li><a href="{{ url_for('online_courses') }}">Online Courses</a></li>
           <li><a href="#">Skill Development</a></li>
         </ul>
       </div>

@@ -47,6 +47,10 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
+@app.route('/online-courses')
+def online_courses():
+    return render_template('onlinecourses.html')
+
 @app.route("/")
 def home():
     context = {"Data": "Some data here to be sent as dict (JSON)"}
@@ -76,8 +80,12 @@ def contact():
         db.session.add(new_message)
         db.session.commit()
 
-        flash("Your message has been sent successfully!", "success")
-        return redirect(url_for('home'))  # Перенаправление на главную страницу (index.html)
+        # Запись данных сообщения в текстовый файл
+        with open("contact_messages.txt", "a") as file:
+            file.write(f"Имя: {name}\nEmail: {email}\nТема: {subject}\nСообщение: {message}\n{'-'*50}\n")
+
+        flash("Ваше сообщение успешно отправлено!", "success")
+        return redirect(url_for('home'))
 
     return render_template("contact.html")
 
@@ -103,7 +111,7 @@ def login():
 
         user = User.query.filter_by(email=email).first()
         if user and bcrypt.check_password_hash(user.password, password):
-            login_user(user)  # Логиним пользователя
+            login_user(user)
             flash("Login successful!", "success")
             return redirect(url_for('home'))
         else:
@@ -112,7 +120,7 @@ def login():
 
     return render_template("login.html")
 
-
+#поменял чтоб после регистрации или логина отображался емейл вместо кнопки гет стартед
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -133,8 +141,11 @@ def register():
         )
         db.session.add(new_user)
         db.session.commit()
-        flash("Registration successful! Please login.", "success")
-        return redirect(url_for('login'))
+
+        # Log in the user immediately after registration
+        login_user(new_user)
+        flash("Registration successful! Welcome!", "success")
+        return redirect(url_for('home'))
 
     return render_template("register.html")
 
