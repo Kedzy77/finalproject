@@ -66,7 +66,7 @@ def contact():
         subject = request.form['subject']
         message = request.form['message']
 
-        # Сохранение сообщения в базе данных
+
         new_message = ContactMessage(
             name=name,
             email=email,
